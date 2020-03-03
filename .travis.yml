@@ -1,8 +1,6 @@
 ---
 language: nix
 before_script:
-  - nix-env -iA nixpkgs.hlint nixpkgs.ruby_2_6
-  - gem install bundler
+  - nix-env -i -f default.nix
 script:
-  - bundle install
-  - bundle exec rake spec
+  - rake spec
